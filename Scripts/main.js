@@ -1,19 +1,19 @@
-var myimage = document.querySelector('img');
+var myImage = document.querySelector('img');
 
-myimage.onclick=function(){
-  var mysrc=myimage.getAttribute('src');
+myImage.onclick=function(){
+  var mysrc=myImage.getAttribute('src');
   if(mysrc==='Images/signs.jpg') {
-    myimage.setAttribute('src','Images/geralt.jpg');
+    myImage.setAttribute('src','Images/geralt.jpg');
   } else {
-    myimage.setAttribute ('src','Images/signs.jpg');
+    myImage.setAttribute ('src','Images/signs.jpg');
   }
 }
-var mybutton = document.querySelector('button');
-var mybutton=document.querySelector('h1')
+var myButton = document.querySelector('button');
+var myHeading = document.querySelector('h1');
 function setUserName() {
-  var myname=prompt('Please enter thou name.');
-  localStorage.setItem('name', myname);
-  myHeading.textContent= 'Welcome,'+myname;
+  var myName = prompt('Please enter thou name.');
+  localStorage.setItem('name', myName);
+  myHeading.textContent = 'Welcome, ' + myName;
 }
 if (!localStorage.getItem('name')) {
   setUserName();
@@ -22,6 +22,6 @@ if (!localStorage.getItem('name')) {
   var storedName=localStorage.getItem('name');
   myHeading.textContent= 'Welcome,'+storedName;
 }
-mybutton.onclick=function(){
+myButton.onclick=function(){
   setUserName();
 }
